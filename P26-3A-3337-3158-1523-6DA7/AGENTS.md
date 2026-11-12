@@ -45,7 +45,7 @@ Este projeto usou **6 agentes** em **3 harnesses** diferentes.
 
 ### Agente 4: Assistente de Arquitetura e Troubleshooting
 - **Harness / Modelo:** Google Gemini · Chat Web (Interface Padrão)
-- **Papel:** Atuou como consultor na fase de planejamento e configuração (setup). Analisou o repositório oficial e a rubrica do projeto para gerar um roteiro de execução detalhado. Também foi responsável pelo *troubleshooting* de problemas no ambiente de desenvolvimento local (resolução de caminhos no Node.js via Scoop), correção de sintaxe no arquivo `wrangler.jsonc` e orientação sobre a inserção de *Secrets* do Discord OAuth2 no painel da Cloudflare.
+- **Papel:** Atuou como consultor na fase de planejamento e configuração (setup). Analisou o repositório oficial e a rubrica do projeto para gerar um roteiro de execução detalhado. Também foi responsável pelo *troubleshooting* de problemas no ambiente de desenvolvimento local (resolução de caminhos no Node.js via Scoop), correção de sintaxe no arquivo `wrangler.jsonc` e orientação sobre a inserção de *Secrets* do Discord OAuth2 no painel da Cloudflare e entre outros.
 - **Skill Utilizada:** [`skills/gemini-arquitetura/SKILL.md`](./skills/gemini-arquitetura/SKILL.md)
 
 ### Agente 5: Assistente de Diagnóstico de Deploy e Auditoria de Conformidade

@@ -4,7 +4,7 @@
 - **Estudante:** Lucas Oliveira Pires
 - **Turma:** 3A
 - **Chave Única:** `P26-3A-3337-3158-1523-6DA7`
-- **URL_CLOUDFLARE:** `https://p26-3a-3337-3158-1523-6da7.pages.dev`
+- **URL_CLOUDFLARE:** `https://p26-3a-3337-3158-1523-6da7.pages.dev/`
 - **Repositório:** https://github.com/LucasPiresGit/Avalia2026-2 (pasta `P26-3A-3337-3158-1523-6DA7/`)
 - **Licença:** [MIT](./LICENSE)
 
