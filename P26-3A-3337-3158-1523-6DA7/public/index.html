@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto #20 — Gerenciador de Horas Complementares</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div>
+        <strong>Projeto #20: Gerenciador de Horas Complementares</strong>
+      </div>
+      <div class="discord-badge" id="discordProfile">
+        <a id="discordLoginLink" href="/api/auth/discord" style="color:inherit;text-decoration:none;">
+          <img id="discordAvatar" alt="" width="24" height="24" style="border-radius:50%;display:none;">
+          <span id="discordUserText">Entrar com Discord OAuth2</span>
+        </a>
+        <a id="logoutLink" href="/api/auth/logout" style="margin-left:0.5rem;font-size:0.75rem;display:none;">Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card" id="authCard">
+      <span class="pill">Projeto Oficial #20</span>
+      <h1>Gerenciador de Horas Complementares</h1>
+      <p class="desc">
+        Controle de atividades formativas exigidas para a graduação. Autentique-se com o Discord,
+        registre eventos, cursos ou projetos de extensão informando a categoria (ensino, pesquisa, extensão),
+        a carga horária total e o link do certificado digital. O servidor aplica o teto de 60h por categoria.
+      </p>
+      <div id="authMessage" class="status-msg"></div>
+    </section>
+
+    <section class="card" id="dashboardCard" style="display:none;">
+      <h2>Painel de Progresso</h2>
+      <p class="desc">Horas validadas por eixo e quanto falta para integralizar a exigência curricular (180h).</p>
+      <div id="progressContainer"></div>
+      <div id="totalProgress" style="margin-top:1rem;"></div>
+    </section>
+
+    <section class="card" id="formCard" style="display:none;">
+      <h2>Registrar Atividade</h2>
+      <div class="form-grid">
+        <label>Categoria
+          <select id="categoryInput" class="input-text">
+            <option value="ensino">Ensino</option>
+            <option value="pesquisa">Pesquisa</option>
+            <option value="extensao">Extensão</option>
+          </select>
+        </label>
+        <label>Título / Descrição
+          <input class="input-text" id="titleInput" type="text" placeholder="Ex.: Curso de Python, Seminário..." maxlength="200">
+        </label>
+        <label>Carga horária (h)
+          <input class="input-text" id="hoursInput" type="number" min="0.5" step="0.5" placeholder="Ex.: 20">
+        </label>
+        <label>Link do certificado digital
+          <input class="input-text" id="certInput" type="url" placeholder="https://...">
+        </label>
+      </div>
+      <div class="form-row">
+        <button class="btn-primary" id="sendBtn" type="button">Registrar no Cloudflare D1</button>
+      </div>
+      <div id="statusMessage" class="status-msg"></div>
+    </section>
+
+    <section class="card" id="listCard" style="display:none;">
+      <h2>Atividades Registradas</h2>
+      <ul class="records-list" id="recordsList"></ul>
+    </section>
+  </main>
+
+  <footer id="projectFooter">
+    Chave Única de Auditoria: <code>P26-3A-3337-3158-1523-6DA7</code> — Turma 3A — Licenciado sob MIT
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
